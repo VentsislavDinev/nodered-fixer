@@ -2,7 +2,7 @@ import os
 import subprocess
 import shlex
 
-result = subprocess.run(shlex.split('journalctl -u systemd-udevd --since 1min ago'))
+result = subprocess.run(shlex.split('journalctl -u nodered --since 1min ago'))
 raw_output = result.stdout
 output = unicode(raw_output, 'UTF-8')
 if 'ERROR' in output:
