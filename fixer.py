@@ -1,6 +1,6 @@
 import os
 
-stat = os.system('service ndoered status')
+stat = os.system('service status nodered ')
 
 if (stat != 0):
-    os.system('service ndoered restart')
+    os.system('service restart nodered ')
