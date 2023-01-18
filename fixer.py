@@ -1,6 +1,6 @@
 import os
 
-stat = os.system('service status nodered ')
+stat = os.system('systemctl show -p ActiveState --value nodered ')
 
-if (stat != 0):
-    os.system('service restart nodered ')
+if (stat != "active"):
+    os.system('service restart nodered')
