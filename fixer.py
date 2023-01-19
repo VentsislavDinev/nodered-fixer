@@ -10,7 +10,7 @@ import shlex
     
 #response = subprocess.Popen(["journalctl", "-u nodered", "--since", "60 seconds ago", "--no-pager"], stdout=subprocess.PIPE).stdout.read()
 #print(response)
-response = subprocess.Popen(["systemctl", " status node-red"], stdout=subproces>
+response = subprocess.Popen(["systemctl", " status node-red"], stdout=subproces.PIPE).stdout.read()
 print("response return: ")
 print(response) 
 
