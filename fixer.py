@@ -8,6 +8,6 @@ p = subprocess.run('systemctl status nodered | grep error', shell=True, capture_
 result = str(p, 'utf-8')
 if "error" in result: 
         f = open("logger.txt", "a")
-        f.write(date_time,"We restart nodered!")
+        f.write("{} We restart nodered!".format(date_time))
         f.close()
         os.system('systemctl restart nodered')
